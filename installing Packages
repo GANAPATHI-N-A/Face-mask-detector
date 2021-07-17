@@ -6,3 +6,4 @@ numpy
 opencv-python
 matplotlib
 scipy
+And you have to download dataset for this programe by https://www.kaggle.com/spandanpatnaik09/face-mask-detectormask-not-mask-incorrect-mask
