@@ -1,0 +1,8 @@
+It is neccessary to install some python package before executing program
+tensorflow
+keras
+imutils
+numpy
+opencv-python
+matplotlib
+scipy
