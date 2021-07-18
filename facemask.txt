@@ -1,0 +1,41 @@
+In this project we are checking whether the person is wearing mask are not buy using the Tensorflow,keras with additional modules.
+Even we have created a dataset which consist of 
+1)with mask
+2)without mask
+
+TRIANING MODELS:-
+From the above taken image we are first training our model.
+create a data list and label list
+-->We are taking image from our system path and loading the image(load_img--> from tensorflow.keras.preprocessing.image import load_img).
+resize it to(224,224)(height,width)and convert that image to array(img_to_array---> from tensorflow.keras.preprocessing.image import img_to_array)
+
+-->then we are to do  preprocessing on the image in which we are actual using the mobilenet.
+-->then we are converting images to the 0's and 1's by using the LabelBinarizer()methods(LabelBinarizer()--> from sklearn.preprocessing import LabelBinarizer())
+-->then we have to convert data[] and label[] to np array.
+-->then we use train_test_split is use to split training and testing data.
+-->here we are giving only 20% of the data to testing and 80% of data to training.
+-->let the intial learning rate INIT_LR=1e-4(when the learning rate is less then loss is less and accuracy is more).
+-->EPOCHS=20
+-->BS=32
+-->imagedatagenetator=which create many image from the same image by roatate,zooming,fliping etc.(use when we have less number of inputs)
+-->mobilenet=it is fast in compileing than conventional method
+     "relu"-->used for non linearmodel
+     "softmax"-->is basically used for the probability(as we using the linearbinarize in above so we can  using softmax or sigma)
+
+-->for the validation of data we are using train x and train y.
+-->we are evaluating the madel by using model.predict method
+-->for each image in the testing set we need to find the index of the label with corresponding largest predicted probability.
+      -->np.argmax()
+-->it will plot the accuracy graph
+
+   DETECTOR MODEL:-
+-->For the face detection model i have couple of files 1)deploy.prototxt 2)res10_300x300_ssd_iter_140000.caffemodel
+
+-->with the help of the face detection file we will detect face and deep learning mask detection model we use to detect mask.
+-->and we use cv for the camera operation.
+-->facenet==is used to take couple of that i had used for face detection.
+-->to read the above file we use cv2.dnn.readNet(dnn=deep nerual network).
+-->load the mask detection model using load_model().
+-->To start the webcam use VideoStream(src=0).start()(start=to load the camera).
+-->Frame is for the window of width=400.
+
