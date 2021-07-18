@@ -7,3 +7,6 @@ opencv-python
 matplotlib
 scipy
 And you have to download dataset for this programe by https://www.kaggle.com/spandanpatnaik09/face-mask-detectormask-not-mask-incorrect-mask
+and make them as folder.
+1)deploy.prototxt 2)res10_300x300_ssd_iter_140000.caffemodel     put these two file in same folder called face detector.
+these two files are given
